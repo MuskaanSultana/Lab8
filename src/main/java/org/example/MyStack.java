@@ -6,12 +6,13 @@ import java.util.EmptyStackException;
 public class MyStack<E> extends ArrayList<E> {
     private ArrayList<E> delegate;
     public MyStack() {
-        delegate = this;
+        delegate = new ArrayList<>();
     }
 
 
 
-    public void push(E e){
+
+public void push(E e){
 
         delegate.add(e);
     }
@@ -21,5 +22,12 @@ public class MyStack<E> extends ArrayList<E> {
         delegate.remove(delegate.size()-1);
         return e;
     }
+    public boolean isEmpty() {
+        return delegate.isEmpty();
+    }
 
+    public int size() {
+        return delegate.size();
+    }
 }
+
