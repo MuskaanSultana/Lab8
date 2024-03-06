@@ -19,12 +19,12 @@ public class AppTest
     public void testPush(){
         MyStack<Integer> stack = new MyStack<>();
         stack.push(42);
-        assertEquals(Integer.valueOf(42), stack.get(0));
+        assertEquals(Integer.valueOf(42), stack.pop());
 
         stack.push(99);
         stack.push(100);
         stack.push(250);
-        assertEquals(Integer.valueOf(250), stack.get(3));
+        assertEquals(Integer.valueOf(250), stack.pop());
     }
     public void testPop(){
         MyStack<Integer> stack = new MyStack<>();
